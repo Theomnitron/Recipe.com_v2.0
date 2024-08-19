@@ -3,10 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/rcon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/materialize.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>Recipe.com_v2.0</title>
     <style>
+        nav a {
+            color: #ee6e73;
+        }
+        .sidenav-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            height: 120vh;
+            background-color: rgba(0, 0, 0, 0);
+            z-index: 997;
+            display: none;
+        }
         .italics{
             font-style: italic;
         }
@@ -35,7 +50,8 @@
 <body>
     
     <header>
-        <div class="navbar-fixed scrollspy" id="top">
+        <!-- navbar for desktop -->
+        <div class="navbar-fixed hide-on-med-and-down scrollspy" id="top">
             <nav class="white">
                 <div class="container">
                     <div class="row">
@@ -45,7 +61,7 @@
                             </a>
                         </div>
                         <div class="col m4 l6">
-                            <ul class="right hide-on-med-and-down">
+                            <ul class="right">
                                 <li>
                                     <a href="#" class="orange-text text-darken-4 bold-text">Who We Are</a>
                                 </li>
@@ -62,7 +78,7 @@
                         </div>
                         <div class="col m4 l2 push-l2">
                             <div class="btn btn-fixed orange darken-4">
-                                <a href="">
+                                <a href="" class="white-text">
                                     login
                                 </a>
                             </div>
@@ -70,19 +86,60 @@
                     </div>
                 </div>
             </nav>
+            <!-- navbar for mobile -->
+        </div>
+        <div class="navbar-fixed hide-on-large-only scrollspy">
+            <nav class="white">
+                <div class="container">
+                    <a href="#sidenav" class="sidenav-trigger">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <a href="index.html" class="brand-logo">
+                        <img src="img/logo.png" alt="" class="responsive-imgZ" style="max-width: 130px">
+                    </a>
+                <ul class="sidenav hide-on-large-only" id="sidenav">
+                    <li>
+                        <a href="#" class="orange-text text-darken-4 bold-text">Who We Are</a>
+                    </li>
+                    <li>
+                        <a href="#" class="orange-text text-darken-4 bold-text">Find a Recipe</a>
+                    </li>
+                    <li>
+                        <a href="#" class="orange-text text-darken-4 bold-text">Our Reviews</a>
+                    </li>
+                    <li>
+                        <a href="#" class="orange-text text-darken-4 bold-text">Contact Us</a>
+                    </li>
+                <br>
+                    <li>
+                        <a href="#" class="btn btn-large orange darken-4 bold-text">
+                            login
+                        </a>
+                    </li>
+                </ul>
+                </div>
+            </nav>
         </div>
     </header>
 
-
     <main>
-        <div class="vid">
-            <video autoplay loop src="vid/header-bg-vid.mp4" class="responsive-vid" style="min-width: 100%"></video>
+        <!-- Graphics for desktop -->
+        <div class="hide-on-med-and-down">
+            <div class="vid">
+                <video autoplay loop src="vid/header-bg-vid.mp4" class="responsive-vid" style="min-width: 100%"></video>
+            </div>
+            <div class="vid-overlay center">
+                <h1 class="center-align white-text">Every Dish Tells a <br> Story.</h1>
+                <h4 class="center-align white-text">Explore, cook, and create with us.</h4>
+                <div class="btn btn-large orange darken-4">
+                    Get started
+                </div>
+            </div>
         </div>
-        <div class="vid-overlay center">
-            <h1 class="center-align white-text">Every Dish Tells a <br> Story.</h1>
-            <h4 class="center-align white-text">Explore, cook, and create with us.</h4>
-            <div class="btn btn-large orange darken-4">
-                Get started
+        <!-- Graphics for mobile -->
+        <div class="hide-on-large-only">
+            <div class="img">
+                <img src="img/welcome-bannerrrrr.jpg" alt="" class="responsive-img">
             </div>
         </div>
 
@@ -255,5 +312,10 @@
 
     <script src="js/jquery.js"></script>
     <script src="js/materialize.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.sidenav').sidenav();
+        });
+    </script>
 </body>
 </html>
