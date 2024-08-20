@@ -25,7 +25,7 @@
         .italics{
             font-style: italic;
         }
-        .divider {
+        .divider{
             height: 2px;
             overflow: hidden;
             background-color: #c2c0c0;
@@ -33,10 +33,16 @@
         .vid{
             position: relative;
         }
-        .vid-overlay{
+        .vid-overlay-DT{
             position: absolute;
             top: 50%;
             left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .vid-overlay-MB{
+            position: absolute;
+            top: 40%;
+            left: 35%;
             transform: translate(-50%, -50%);
         }
         .gradient{
@@ -128,7 +134,7 @@
             <div class="vid">
                 <video autoplay loop src="vid/header-bg-vid.mp4" class="responsive-vid" style="min-width: 100%"></video>
             </div>
-            <div class="vid-overlay center">
+            <div class="vid-overlay-DT-DT center">
                 <h1 class="center-align white-text">Every Dish Tells a <br> Story.</h1>
                 <h4 class="center-align white-text">Explore, cook, and create with us.</h4>
                 <div class="btn btn-large orange darken-4">
@@ -141,11 +147,11 @@
             <div class="img">
                 <img src="img/welcome-bannerrrrr.jpg" alt="" class="responsive-img">
             </div>
-            <div class="vid-overlay center">
-                <h1 class="center-align white-text">Every Dish Tells a <br> Story.</h1>
-                <h4 class="center-align white-text">Explore, cook, and create with us.</h4>
+            <div class="vid-overlay-MB">
+                <h4 class="center-align white-text left-align">Every Dish Tells a Story.</h4>
+                <h6 class="center-align white-text left-align">Explore, cook, and create with us.</h6>
                 <div class="btn btn-large orange darken-4">
-                    Get started
+                    <span>Get started</span>
                 </div>
             </div>
         </div>
