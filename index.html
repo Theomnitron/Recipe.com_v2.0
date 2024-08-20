@@ -41,20 +41,20 @@
         }
         .vid-overlay-MB-1{
             position: absolute;
-            top: 30%;
+            top: 20%;
             left: 10%;
             transform: translate(-0%, -50%);
             font-size: 35px;
         }
         .vid-overlay-MB-2{
             position: absolute;
-            top: 40%;
+            top: 30%;
             left: 10%;
             transform: translate(-0%, -50%);
         }
         .vid-overlay-MB-3{
             position: absolute;
-            top: 50%;
+            top: 40%;
             left: 10%;
             transform: translate(-0%, -10%);
         }
@@ -178,14 +178,16 @@
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae autem repellendus labore explicabo quis quam nostrum animi dolor non nam.</p>
                         <div class="btn btn-large orange darken-4">Start your journey</div>
                     </div>
-                    <div class="col l6">
+                    <div class="col l6 hide-on-med-and-down">
                         <img src="img/spagetti.png" alt="" class="responsive-img">
                     </div>
                 </div>
             </div>
 <br>
-            <div class="container">
-                <h2 class="center-align">Select a <span class="orange-text text-darken-4 italics">category</span> </h2>
+
+<!-- Fr Desktop -->
+            <div class="container hide-on-med-and-down">
+                <h2 class="center-align hide-on-med-and-down">Select a <span class="orange-text text-darken-4 italics">category</span> </h2>
 <br>
                 <div class="row">
                     <div class="col l4">
@@ -197,6 +199,25 @@
                     <div class="col l4">
                         <img src="img/soup-main.jpg" alt="" class="responsive-img img-border">
                     </div>
+                </div>
+            </div>
+
+<!-- Fr Desktop -->
+            <div class="hide-large-only">
+                <h2 class="center-align">Tap on a <span class="orange-text text-darken-4 italics">category</span> </h2>
+<br>
+                <div class="slider">
+                    <ul class="slides">
+                        <li>
+                            <img src="img/cake-main.jpg" alt="" class="responsive-img materialboxed">
+                        </li>
+                        <li>
+                            <img src="img/chicken-main.jpg" alt="" class="responsive-img materialboxed">
+                        </li>
+                        <li>
+                            <img src="img/soup-main.jpg" alt="" class="responsive-img materialboxed">
+                        </li>
+                    </ul>
                 </div>
             </div>
 <br><br>
@@ -341,6 +362,13 @@
     <script>
         $(document).ready(function(){
             $('.sidenav').sidenav();
+            $('.slider').slider({
+                indicators: false,
+                height: 480,
+                interval: 4000, <!--How long the picture stays befor changing; while duration is how long the transition takes-->
+                duration: 1000, 
+            });
+            $('.materialboxed').materialbox();
         });
     </script>
 </body>
