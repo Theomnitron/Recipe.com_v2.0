@@ -9,7 +9,7 @@
     <title>Recipe.com_v2.0</title>
     <style>
         nav a {
-            color: #ee6e73;
+            color: #e65100;
         }
         .sidenav-overlay {
             position: fixed;
@@ -22,13 +22,15 @@
             z-index: 997;
             display: none;
         }
+        .navlink_DT:hover{
+            font-weight: 600;
+        }
         .italics{
             font-style: italic;
         }
         .divider{
-            height: 2px;
             overflow: hidden;
-            background-color: #c2c0c0;
+            background-color: #5a5a5a;
         }
         .vid{
             position: relative;
@@ -58,11 +60,36 @@
             left: 10%;
             transform: translate(-0%, -10%);
         }
+        .wizard-MB{
+            color: rgb(170, 5, 104);
+        }
+        #purple-btn{
+            text-decoration: none;
+            color: #fff;
+            background-color: rgb(170, 5, 104);
+            text-align: center;
+            letter-spacing: .5px;
+            -webkit-transition: background-color .2s ease-out;
+            transition: background-color .2s ease-out;
+            cursor: pointer;
+        }
+        blockquote{
+            margin: 20px 0;
+            padding-left: 1.5rem;
+            border-left: 5px;
+        }
         .gradient{
-            background-color: rgb(237, 131, 37);
+            background: linear-gradient(to bottom, white, #e65100);
         }
         .copyright{
             color: rgba(255, 255, 255, 0.722);
+        }
+        #copyright{
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .btn_border{
+            border-radius: 8px;
         }
     </style>
 </head>
@@ -82,21 +109,21 @@
                         <div class="col m4 l6">
                             <ul class="right">
                                 <li>
-                                    <a href="#" class="orange-text text-darken-4 bold-text">Who We Are</a>
+                                    <a href="#" class="orange-text text-darken-4 bold-text navlink_DT">Who We Are</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="orange-text text-darken-4 bold-text">Find a Recipe</a>
+                                    <a href="#" class="orange-text text-darken-4 bold-text navlink_DT">Find a Recipe</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="orange-text text-darken-4 bold-text">Our Reviews</a>
+                                    <a href="#" class="orange-text text-darken-4 bold-text navlink_DT">Our Reviews</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="orange-text text-darken-4 bold-text">Contact Us</a>
+                                    <a href="#" class="orange-text text-darken-4 bold-text navlink_DT">Contact Us</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="col m4 l2 push-l2">
-                            <div class="btn btn-fixed orange darken-4">
+                            <div class="btn btn-fixed btn_border orange darken-4 navlink_DT">
                                 <a href="" class="white-text">
                                     login
                                 </a>
@@ -131,7 +158,7 @@
                     </li>
                 <br>
                     <li>
-                        <a href="#" class="btn btn-large orange darken-4 bold-text">
+                        <a href="#" class="btn btn-large btn_border orange darken-4 bold-text">
                             login
                         </a>
                     </li>
@@ -147,14 +174,15 @@
             <div class="vid">
                 <video autoplay loop src="vid/header-bg-vid.mp4" class="responsive-vid" style="min-width: 100%"></video>
             </div>
-            <div class="vid-overlay-DT-DT center">
+            <div class="vid-overlay-DT center">
                 <h1 class="center-align white-text">Every Dish Tells a <br> Story.</h1>
                 <h4 class="center-align white-text">Explore, cook, and create with us.</h4>
-                <div class="btn btn-large orange darken-4">
+                <div class="btn btn-large btn_border orange darken-4 navlink_DT">
                     Get started
                 </div>
             </div>
         </div>
+
         <!-- Graphics for mobile -->
         <div class="hide-on-large-only">
             <div class="img">
@@ -163,93 +191,124 @@
             <div class="">
                 <h3 class="center-align white-text left-align vid-overlay-MB-1">Every Dish Tells a Story.</h3>
                 <h6 class="center-align white-text left-align vid-overlay-MB-2">Explore, cook, and create with us.</h6>
-                <div class="btn btn-large orange darken-4 vid-overlay-MB-3">
+                <div class="btn btn_border orange darken-4 vid-overlay-MB-3">
                     <span>Get started</span>
                 </div>
             </div>
         </div>
 
-<br><br>
+<br>
         <section class="main-body">
             <div class="container">
                 <div class="row">
                     <div class="col l6">
-                        <h2>Start your culinary journey <span class="orange-text text-darken-4 italics">today</span> </h2>
+                        <h3>Start your culinary journey <span class="orange-text text-darken-4 italics">today</span> </h3>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae autem repellendus labore explicabo quis quam nostrum animi dolor non nam.</p>
-                        <div class="btn btn-large orange darken-4">Start your journey</div>
+                        <div class="btn btn-large btn_border orange darken-4 navlink_DT">Start your journey</div>
                     </div>
-                    <div class="col l6 hide-on-med-and-down">
+                    <div class="col l6 hide-on-med-and-down" style="width: 35%;">
                         <img src="img/spagetti.png" alt="" class="responsive-img">
                     </div>
                 </div>
             </div>
 <br>
 
-<!-- Fr Desktop -->
+<!-- Category for Desktop -->
             <div class="container hide-on-med-and-down">
                 <h2 class="center-align hide-on-med-and-down">Select a <span class="orange-text text-darken-4 italics">category</span> </h2>
 <br>
                 <div class="row">
                     <div class="col l4">
-                        <img src="img/cake-main.jpg" alt="" class="responsive-img img-border">
+                        <img src="img/cake-main.jpg" alt="" class="responsive-img img-border img-text-hover">
+                        <h3 class="white-text hide">Cakes</h3>
                     </div>
                     <div class="col l4">
-                        <img src="img/chicken-main.jpg" alt="" class="responsive-img img-border">
+                        <img src="img/chicken-main.jpg" alt="" class="responsive-img img-border img-text-hover">
+                        <h3 class="white-text hide">Chickens</h3>
                     </div>
                     <div class="col l4">
-                        <img src="img/soup-main.jpg" alt="" class="responsive-img img-border">
+                        <img src="img/soup-main.jpg" alt="" class="responsive-img img-border img-text-hover">
+                        <h3 class="white-text hide">Soups</h3>
                     </div>
                 </div>
             </div>
 
-<!-- Fr Desktop -->
-            <div class="hide-large-only">
+<!-- Category for Mobile -->
+            <div class="hide-on-large-only">
                 <h2 class="center-align">Tap on a <span class="orange-text text-darken-4 italics">category</span> </h2>
 <br>
                 <div class="slider">
                     <ul class="slides">
                         <li>
                             <img src="img/cake-main.jpg" alt="" class="responsive-img materialboxed">
+                            <div class="caption">
+                                <h3>Cakes</h3>
+                            </div>
                         </li>
                         <li>
                             <img src="img/chicken-main.jpg" alt="" class="responsive-img materialboxed">
+                            <div class="caption">
+                                <h3>Chickens</h3>
+                            </div>
                         </li>
                         <li>
                             <img src="img/soup-main.jpg" alt="" class="responsive-img materialboxed">
+                            <div class="caption">
+                                <h3>Soups</h3>
+                            </div>
                         </li>
                     </ul>
                 </div>
             </div>
 <br><br>
-            <div class="container">
+
+<!-- Culinary For Desktop -->
+            <div class="container hide-on-med-and-down">
                 <div class="row">
                     <div class="col l6">
                         <img src="img/chef.jpg" alt="" class="responsive-img">
                     </div>
                     <div class="col l6">
-                        <h2>Crafted by culinary <span class="orange-text text-darken-4">Wizards.</span> </h2>
+                        <h2>Crafted by culinary <span class=" wizard-MB">Wizards.</span> </h2>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem et dolorem vel repudiandae reprehenderit, odit debitis nihil deserunt molestiae commodi! Deleniti cum ex alias vel!</p>
-                        <div class="btn btn-large orange darken-4">Start Cooking</div>
+                        <div class="btn btn-large btn_border navlink_DT" id="purple-btn"><a href="" class="white-text">Start Cooking</a></div>
+                    </div>
+                </div>
+            </div>
+
+<!-- Culinary For Mobile -->
+            <div class="container hide-on-large-only">
+                <div class="row">
+                    <div class="col l6">
+                        <img src="img/chef-thumbs-up.jpg" alt="" class="responsive-img">
+                    </div>
+                    <div class="col l6">
+                        <h3 class="center-align">Crafted by culinary <br><span class="wizard-MB italics">Wizards.</span> </h3>
+                        <p class="justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi labore temporibus provident debitis ullam laudantium ipsam nam officia! Iste hic impedit maxime sed, ducimus ut aliquid est nostrum debitis illo rem vel et illum, molestiae animi? Rem exercitationem ducimus assumenda eligendi, corporis dignissimos quo consequatur. Eius, voluptas nostrum? Ducimus, iste.</p>
+                        <div class="btn btn-large btn_border left" id="purple-btn">
+                            <a href="" class="white-text">Start Cooking</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="black">
+<!-- See our numbers for Desktop -->
+        <section class="black hide-on-med-and-down">
             <div class="container">
 <br>
-                <h3 class="white-text center-align">See our <span class="orange-text text-darken-4">numbers</span> </h3>
+                <h3 class="white-text center-align">See our <span class="orange-text text-darken-4 italics">numbers</span> </h3>
 <br>
                 <div class="row">
-                    <div class="col l4 center">
+                    <div class="col s12 l4 center">
                         <h4 class="white-text">27k+</h4>
                         <p class="orange-text text-darken-4">active users each month</p>
                     </div>
-                    <div class="col l4 center">
+                    <div class="col s12 l4 center">
                         <h4 class="white-text">800+</h4>
                         <p class="orange-text text-darken-4">available recipes till date</p>
                     </div>
-                    <div class="col l4 center">
+                    <div class="col s12 l4 center">
                         <h4 class="white-text">30+</h4>
                         <p class="orange-text text-darken-4">chefs for consultation</p>
                     </div>
@@ -258,48 +317,132 @@
 <br>
         </section>
 
-        <section class="experts">
+<!-- See our numbers for Mobile -->
+        <section class="black hide-on-large-only">
+            <div class="container">
+<br>
+                <h3 class="white-text center-align">See our <br><span class="orange-text text-darken-4 italics">numbers</span> </h3>
+<br>
+                <div class="row">
+                    <div class="col s12 l4 center">
+                        <h4 class="white-text">27k+</h4>
+                        <p class="orange-text text-darken-4">active users each month</p>
+                    </div>
+                    <div class="col s12 l4 center">
+                        <h4 class="white-text">800+</h4>
+                        <p class="orange-text text-darken-4">available recipes till date</p>
+                    </div>
+                    <div class="col s12 l4 center">
+                        <h4 class="white-text">30+</h4>
+                        <p class="orange-text text-darken-4">chefs for consultation</p>
+                    </div>
+                </div>
+            </div>
+<br>
+        </section>
+
+
+<!-- Experts For Desktop -->
+        <section class="experts hide-on-med-and-down">
             <div class="container">
                 <h3>Meet the <span class="orange-text text-darken-4 italics">experts</span></h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, quasi tempora. Tempore ratione voluptate facilis perspiciatis enim iure. Laudantium, voluptas!</p>
                 <div class="row">
                     <div class="col l4">
                         <img src="img/expert-1.jpg" alt="" class="responsive-img">
-                        <p>Liam <span class="orange-text text-darken-4 italics">Hamish</span></p>
+                        <blockquote>Liam <span class="orange-text text-darken-4 italics">Hamish</span></blockquote>
                     </div>
                     <div class="col l4">
                         <img src="img/expert-2.jpg" alt="" class="responsive-img">
-                        <p>Alejandro <span class="orange-text text-darken-4 italics">Mateo</span></p>
+                        <blockquote>Alejandro <span class="orange-text text-darken-4 italics">Mateo</span></blockquote>
                     </div>
                     <div class="col l4">
                         <img src="img/expert-3.jpg" alt="" class="responsive-img">
-                        <p>Miranda <span class="orange-text text-darken-4 italics">Tangrove</span></p>
+                        <blockquote>Miranda <span class="orange-text text-darken-4 italics">Tangrove</span></blockquote>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="cliente">
+
+<!-- Experts For Mobile -->
+        <section class="experts hide-on-large-only">
+            <div class="container">
+                <h3 class="center-align">Meet the <span class="orange-text text-darken-4 italics">experts</span></h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, quasi tempora. Tempore ratione voluptate facilis perspiciatis enim iure. Laudantium, voluptas!</p>
+                <div class="row">
+                    <div class="col s12 l4">
+                        <img src="img/expert-1.jpg" alt="" class="responsive-img">
+                        <blockquote>Liam <span class="orange-text text-darken-4 italics">Hamish</span></blockquote>
+                        <br>
+                    </div>
+                    <div class="col s12 l4">
+                        <img src="img/expert-2.jpg" alt="" class="responsive-img">
+                        <blockquote>Alejandro <span class="orange-text text-darken-4 italics">Mateo</span></blockquote>
+                        <br>
+                    </div>
+                    <div class="col s12 l4">
+                        <img src="img/expert-3.jpg" alt="" class="responsive-img">
+                        <blockquote>Miranda <span class="orange-text text-darken-4 italics">Tangrove</span></blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+<br>
+
+<!-- Cliente For Desktop -->
+        <section class="cliente hide-on-med-and-down">
             <div class="container">
                 <div class="divider"></div>
             </div>
                 <h2 class="center-align">Our Esteemed <span class="orange-text text-darken-4 italics">Cliente</span> </h2>
                 <div class="row">
-                    <div class="col l2">
+                    <div class="col s6 l2">
                         <img src="img/rest-1.avif" alt="" class="responsive-img">
                     </div>
-                    <div class="col l2">
+                    <div class="col s6 l2">
                         <img src="img/rest-2.avif" alt="" class="responsive-img">
                     </div>
-                    <div class="col l2">
+                    <div class="col s6 l2">
                         <img src="img/rest-3.avif" alt="" class="responsive-img">
                     </div>
-                    <div class="col l2">
+                    <div class="col s6 l2">
                         <img src="img/rest-4.avif" alt="" class="responsive-img">
                     </div>
-                    <div class="col l2">
+                    <div class="col s6 l2">
                         <img src="img/rest-5.avif" alt="" class="responsive-img">
                     </div>
-                    <div class="col l2">
+                    <div class="col s6 l2">
+                        <img src="img/rest-6.avif" alt="" class="responsive-img">
+                    </div>
+                </div>
+            <div class="container">
+                <div class="divider"></div>
+            </div>
+        </section>
+
+<!-- Cliente For Mobile -->
+        <section class="cliente hide-on-large-only">
+            <div class="container">
+                <div class="divider"></div>
+            </div>
+                <h3 class="center-align">Our Esteemed <span class="orange-text text-darken-4 italics">Cliente</span> </h3>
+                <div class="row">
+                    <div class="col s6 l2">
+                        <img src="img/rest-1.avif" alt="" class="responsive-img">
+                    </div>
+                    <div class="col s6 l2">
+                        <img src="img/rest-2.avif" alt="" class="responsive-img">
+                    </div>
+                    <div class="col s6 l2">
+                        <img src="img/rest-3.avif" alt="" class="responsive-img">
+                    </div>
+                    <div class="col s6 l2">
+                        <img src="img/rest-4.avif" alt="" class="responsive-img">
+                    </div>
+                    <div class="col s6 l2">
+                        <img src="img/rest-5.avif" alt="" class="responsive-img">
+                    </div>
+                    <div class="col s6 l2">
                         <img src="img/rest-6.avif" alt="" class="responsive-img">
                     </div>
                 </div>
@@ -315,7 +458,7 @@
         <section class="details">
             <div class="container">
                 <div class="row">
-                    <div class="col l3">
+                    <div class="col s12 l3">
                         <a class="orange-text text-darken-4" href="">About</a>
                         <ul>
                             <li>Who We Are</li>
@@ -323,7 +466,7 @@
                             <li>FAQs</li>
                         </ul>
                     </div>
-                    <div class="col l3">
+                    <div class="col s12 l3">
                         <a class="orange-text text-darken-4" href="">Explore</a>
                         <ul>
                             <li>Recipes</li>
@@ -332,7 +475,7 @@
                             <li>Soups</li>
                         </ul>
                     </div>
-                    <div class="col l3">
+                    <div class="col s12 l3">
                         <a class="orange-text text-darken-4" href="">Legal</a>
                         <ul>
                             <li>Privacy Policy</li>
@@ -340,7 +483,7 @@
                             <li>Disclosure</li>
                         </ul>
                     </div>
-                    <div class="col l3">
+                    <div class="col s12 l3">
                         <a class="orange-text text-darken-4" href="">Contac Us</a>
                         <ul>
                             <li>+234 9060194677</li>
@@ -352,7 +495,7 @@
         </section>
 <br>
         <section class="copyright center">
-            <h6>&copy; 2024. Recipe.com. All rights reserved.</h6>
+            <h6 id="copyright">&copy; 2024. Recipe.com. All rights reserved.</h6>
         </section>
 <br><br>
     </footer>
@@ -365,8 +508,8 @@
             $('.slider').slider({
                 indicators: false,
                 height: 480,
-                interval: 4000, <!--How long the picture stays befor changing; while duration is how long the transition takes-->
-                duration: 1000, 
+                interval: 4000,
+                duration: 1000,
             });
             $('.materialboxed').materialbox();
         });
