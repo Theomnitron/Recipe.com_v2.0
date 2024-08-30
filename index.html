@@ -31,6 +31,13 @@
         #big_numbers{
             font-size: 50px;
         }
+        #big_numbers-2{
+            font-size: 40px;
+        }
+        .caption a{
+            font-size: 40px;
+            text-decoration: underline;
+        }
         .sidenav-overlay {
             position: fixed;
             top: 0;
@@ -68,24 +75,10 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
-        .vid-overlay-MB-1{
+        .vid-overlay-MB{
             position: absolute;
-            top: 20%;
-            left: 10%;
-            transform: translate(-0%, -50%);
-            font-size: 35px;
-        }
-        .vid-overlay-MB-2{
-            position: absolute;
-            top: 30%;
-            left: 10%;
-            transform: translate(-0%, -50%);
-        }
-        .vid-overlay-MB-3{
-            position: absolute;
-            top: 40%;
-            left: 10%;
-            transform: translate(-0%, -10%);
+            top: 43%;
+            transform: translate(5%, -50%);
         }
         .wizard-MB{
             color: rgb(170, 5, 104);
@@ -104,6 +97,7 @@
             margin: 20px 0;
             padding-left: 1.5rem;
             border-left: 5px;
+            font-size: 18px;
         }
         .gradient{
             background: linear-gradient(to bottom, white, #e65100);
@@ -162,7 +156,7 @@
             <!-- navbar for mobile -->
         </div>
         <div class="navbar-fixed hide-on-large-only scrollspy">
-            <nav class="white">
+            <nav class="white z-depth-0 ">
                 <div class="container">
                     <a href="#sidenav" class="sidenav-trigger">
                         <i class="material-icons">menu</i>
@@ -215,10 +209,11 @@
             <div class="img">
                 <img src="img/welcome-bannerrrrr.jpg" alt="" class="responsive-img">
             </div>
-            <div class="">
-                <h3 class="center-align white-text left-align vid-overlay-MB-1">Every Dish Tells a Story.</h3>
-                <h6 class="center-align white-text left-align vid-overlay-MB-2">Explore, cook, and create with us.</h6>
-                <div class="btn btn_border orange darken-4 vid-overlay-MB-3">
+            <div class="vid-overlay-MB">
+                <h3 class="white-text left-align">Every Dish Tells a Story.</h3>
+                <h6 class="white-text left-align">Explore, cook, and create with us.</h6>
+                <br><br>
+                <div class="btn btn_border orange darken-4">
                     <span>Get started</span>
                 </div>
             </div>
@@ -227,7 +222,6 @@
 
         <section class="main-body section">
             <div class="container">
-                <br><br>
                 <div class="row">
                     <div class="col l6">
                         <h3>Start your culinary journey <span class="orange-text text-darken-4 italics">today.</span> </h3>
@@ -260,35 +254,50 @@
                     </div>
                 </div>
             </div>
+<br>
 
 <!-- Category for Mobile -->
             <div class="hide-on-large-only">
-                <h2 class="center-align">Tap on a <span class="orange-text text-darken-4 italics">category</span> </h2>
+                <h3 class="center-align">Tap on a <span class="orange-text text-darken-4 italics">category</span> </h3>
 <br>
                 <div class="slider">
                     <ul class="slides">
                         <li>
-                            <img src="img/cake-main.jpg" alt="" class="responsive-img materialboxed">
-                            <div class="caption">
-                                <h3>Cakes</h3>
+                            <div class="image-cont-2">
+                                <a href="">
+                                    <img src="img/cake-main.jpg" alt="" class="responsive-img materialboxed">
+                                </a>
+                                <div class="caption">
+                                    <a href="" style="color: white;">
+                                        Cakes
+                                        <i class="material-icons">call_made</i>
+                                    </a>
+                                </div>
                             </div>
                         </li>
                         <li>
                             <img src="img/chicken-main.jpg" alt="" class="responsive-img materialboxed">
                             <div class="caption">
-                                <h3>Chickens</h3>
+                                <a href="" style="color: white;">
+                                        Chickens
+                                        <i class="material-icons">call_made</i>
+                                    </a>
                             </div>
                         </li>
                         <li>
                             <img src="img/soup-main.jpg" alt="" class="responsive-img materialboxed">
                             <div class="caption">
-                                <h3>Soups</h3>
+                                <a href="" style="color: white;">
+                                        Soups
+                                        <i class="material-icons">call_made</i>
+                                    </a>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
 <br><br>
+
 
 <!-- Culinary For Desktop -->
             <div class="container hide-on-med-and-down">
@@ -312,7 +321,7 @@
                     </div>
                     <div class="col l6">
                         <h3 class="center-align">Crafted by culinary <br><span class="wizard-MB italics">Wizards.</span> </h3>
-                        <p class="justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi labore temporibus provident debitis ullam laudantium ipsam nam officia! Iste hic impedit maxime sed, ducimus ut aliquid est nostrum debitis illo rem vel et illum, molestiae animi? Rem exercitationem ducimus assumenda eligendi, corporis dignissimos quo consequatur. Eius, voluptas nostrum? Ducimus, iste.</p>
+                        <p class="justify">Discover a world of flavourful options that promise muthwatering results, meticulously curated and perfected by culinary experts, all at fingertips. Easy as pie, isn't it?</p>
                         <div class="btn btn-large btn_border left" id="purple-btn">
                             <a href="" class="white-text">Start Cooking</a>
                         </div>
@@ -324,7 +333,7 @@
 <!-- See our numbers for Desktop -->
         <section class="black hide-on-med-and-down section">
             <div class="container">
-                <h3 class="white-text center-align" id="big_numbers">See our <span class="orange-text text-darken-4 italics">numbers</span> </h3>
+                <h3 class="white-text center-align">See our <span class="orange-text text-darken-4 italics">numbers</span> </h3>
 <br>
                 <div class="row">
                     <div class="col s12 l4 center">
@@ -350,21 +359,21 @@
                 <h3 class="white-text center-align">See our <br><span class="orange-text text-darken-4 italics">numbers</span> </h3>
 <br>
                 <div class="row">
-                    <div class="col s12 l4 center">
-                        <h4 class="white-text">27k+</h4>
+                    <div class="col s12 l4 center" id="big_numbers-2">
+                        <h3 class="white-text">27k+</h3>
                         <p class="orange-text text-darken-4">active users each month</p>
                     </div>
-                    <div class="col s12 l4 center">
-                        <h4 class="white-text">800+</h4>
+                    <div class="col s12 l4 center" id="big_numbers-2">
+                        <h3 class="white-text">800+</h3>
                         <p class="orange-text text-darken-4">available recipes till date</p>
                     </div>
-                    <div class="col s12 l4 center">
-                        <h4 class="white-text">30+</h4>
+                    <div class="col s12 l4 center" id="big_numbers-2">
+                        <h3 class="white-text">30+</h3>
                         <p class="orange-text text-darken-4">chefs for consultation</p>
                     </div>
                 </div>
             </div>
-
+<br>
         </section>
 
 
@@ -394,7 +403,7 @@
         <section class="experts hide-on-large-only section">
             <div class="container">
                 <h3 class="center-align">Meet the <span class="orange-text text-darken-4 italics">experts</span></h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, quasi tempora. Tempore ratione voluptate facilis perspiciatis enim iure. Laudantium, voluptas!</p>
+                <p>Our team of seasoned chefs offer expert guidance and delectable recipes to elevate your kitchen creations to new heights</p>
                 <div class="row">
                     <div class="col s12 l4">
                         <img src="img/expert-1.jpg" alt="" class="responsive-img rounded-border">
@@ -535,8 +544,8 @@
             $('.slider').slider({
                 indicators: false,
                 height: 480,
-                interval: 4000,
-                duration: 1000,
+                interval: 2000,
+                duration: 500,
             });
             $('.materialboxed').materialbox();
         });
